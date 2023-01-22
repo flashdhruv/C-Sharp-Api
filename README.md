@@ -8,7 +8,7 @@ Running the program and using postman works too.
 
 To check if the project is working, build and run the solution.
 Then add "https://localhost:7065/replaceDogWithCat" as the url in postman. 
-Change the type of request to POST.
+Change the type of request to GET.
 Add the demo payload seen below.
 Hit send. The expected result should appear.
 
