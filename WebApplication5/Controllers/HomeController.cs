@@ -29,14 +29,16 @@ namespace WebApplication5.Controllers
                 foreach (var item in originalJsonObject)
                 {
                     string value = item.Value.ToString();
-                    if (value.Contains("dog"))
+                    string[] arrayOfWords = value.Split(' ');
+                    for(int i = 0; i < arrayOfWords.Length; i++)
                     {
-                        newJsonObject.Add(item.Key, value.Replace("dog", "cat"));
+                        if (string.Compare(arrayOfWords[i], "dog") == 0)
+                        {
+                            arrayOfWords[i] = "cat";
+                        }
                     }
-                    else
-                    {
-                        newJsonObject.Add(item.Key, item.Value.ToString());
-                    }
+                    string newValue = string.Join(' ', arrayOfWords);
+                    newJsonObject.Add(item.Key, newValue);
                 }
                 newJsonArray.Add(newJsonObject);
             }

@@ -22,7 +22,7 @@ namespace TestProject1
             JsonArray ExpectedjArray = new JsonArray();
             JsonObject ExpectedjObject = new JsonObject();
             ExpectedjObject.Add("type", "cat");
-            ExpectedjObject.Add("name", "catgy catgerson");
+            ExpectedjObject.Add("name", "doggy doggerson");
             ExpectedjArray.Add(ExpectedjObject);
 
             var homeController = new HomeController(jArray);
