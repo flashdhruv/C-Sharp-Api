@@ -6,6 +6,12 @@ and replace the string "dog" with "cat" whereever there may be an occurence.
 Adding functional tests that can easily be done in the project will be done later.
 To currently test for accuracy, Postman was used.
 
+To check if the project is working, build and run the solution.
+Then add "https://localhost:7065/replaceDogWithCat" as the url in postman. 
+Change the type of request to POST.
+Add the demo payload seen below.
+Hit send. The expected result should appear.
+
 # Here's an example payload sent in the body of the request:
 [
                          {
