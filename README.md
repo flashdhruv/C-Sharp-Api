@@ -27,7 +27,7 @@ Hit send. The expected result should appear.
         {
             "name": "cat doe",
             "age": "30",
-            "department": "catgy"
+            "department": "doggy"
         }
     ],
     "formatters": [],
