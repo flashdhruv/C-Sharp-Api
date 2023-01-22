@@ -3,8 +3,8 @@ A project with the aim to use C# and .Net to create an HTTP endpoint.
 The aim of the endpoint was to accept a bunch of JSON objects in an array
 and replace the string "dog" with "cat" whereever there may be an occurence.
 
-Adding functional tests that can easily be done in the project will be done later.
-To currently test for accuracy, Postman was used.
+For tests, A unit test has been created and just needs to be run. 
+Running the program and using postman works too. 
 
 To check if the project is working, build and run the solution.
 Then add "https://localhost:7065/replaceDogWithCat" as the url in postman. 
@@ -38,7 +38,6 @@ Hit send. The expected result should appear.
 
 # Things that could be improved include:
 
-1) Creating appropriate unit tests
+1) Possible uses of databases
 2) Possibly creating views to display the data 
 3) Creating a form to input the data that needs to be updated
-4) Possible uses of databases
