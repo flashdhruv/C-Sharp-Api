@@ -1,17 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
 using System.Text.Json.Nodes;
 using System.Web.Http.Results;
 using WebApplication5.Controllers;
 
-namespace WebApplication5.UnitTests
+namespace TestProject1
 {
     [TestClass]
-    public class UnitTest
+    public class UnitTest1
     {
-        //Unit test to check if the arrays would match
+        //Complete test for the API
+        //Creates a JsonArray and an expected result
+        //Checks for comparison.
         [TestMethod]
-        public void TestMethod1()
+        public void TestReplaceDogWithCat()
         {
             JsonArray jArray = new JsonArray();
             JsonObject jObject = new JsonObject();
@@ -25,10 +25,10 @@ namespace WebApplication5.UnitTests
             ExpectedjObject.Add("name", "catgy catgerson");
             ExpectedjArray.Add(ExpectedjObject);
 
-            var homeController = new HomeController();
+            var homeController = new HomeController(jArray);
 
-            var result = homeController.ReplaceDogWithCat(jArray) as OkNegotiatedContentResult<JsonArray>;
-            Assert.AreEqual(result, ExpectedjArray);
+            var result = homeController.ReplaceDogWithCat();
+            Assert.AreEqual(result[0].ToString() , ExpectedjArray[0].ToString());
             
         }
     }

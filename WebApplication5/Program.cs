@@ -13,8 +13,8 @@ app.MapGet("/", () => "Hello World!");
 // Payload is passed through the body and sent to the controller to be dealt with 
 app.MapGet("/replaceDogWithCat",  ([FromBody] JsonArray json) =>
 {
-    var homeController = new HomeController();
-    var response = homeController.ReplaceDogWithCat(json);
+    var homeController = new HomeController(json);
+    var response = homeController.ReplaceDogWithCat();
     return response;
     
 }); 

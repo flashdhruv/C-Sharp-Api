@@ -6,11 +6,20 @@ namespace WebApplication5.Controllers
     public class HomeController : Controller
     {
 
+        JsonArray originalJsonAray =  new JsonArray();
+
+        public HomeController(JsonArray originalJsonAray)
+        {
+            this.originalJsonAray = originalJsonAray;
+        }
+
+
+
         //All the magic happens here.
         //"dog" is replaced with "cat" if the value contains that string. 
         //Wasn't sure if case sensitivity was important.
         //Passing the Json Objects in an array seemed like the right way to go. However can be changed for single Object
-        public IActionResult ReplaceDogWithCat(JsonArray originalJsonAray)
+        public JsonArray ReplaceDogWithCat()
         {
             JsonArray newJsonArray = new JsonArray();
 
@@ -33,7 +42,7 @@ namespace WebApplication5.Controllers
             }
 
 
-            return Ok(newJsonArray);
+            return (newJsonArray);
         }
     }
 }
